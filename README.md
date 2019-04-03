@@ -64,5 +64,9 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 | ------------- | ------------- |
 | <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig5.png"> | <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig6.png">|
 
+**Step 3.** When using PeptideProphet, please ensure "Validation Mode=".
 
+<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig7.png" height="60%" width="60%">
 
+# Processing/Concensus Workflows
+We also provides several processing and concensus workflows for download as references.
