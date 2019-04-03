@@ -4,6 +4,13 @@ MSFragger, an ultrafast database search tool, has been increasingly used for pep
 
 
 
+# Experiments
+Based on our evaluation, you are able to perform the following experiments with the two nodes:
+- Closed search on labeling/label-free data
+- Open search on label-free data
+
+
+
 # Installation
 
 The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. Please follow the steps belwo for the installation:
@@ -31,7 +38,7 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 
 
 
-# Requirement
+# Requirements
 
 - Input files should be in either **mzXML or mzML file formats** because MSFragger currently does not support files in .raw format.
 - Please **DO NOT** use "zlib compression" during file conversion because Proteome Discoverer currently does not support the compression function. An example of parameter setting in file conversion using ProteoWizard is shown in the figure below.
@@ -39,5 +46,10 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig4.png" height="60%" width="60%" title="File Conversion">
 
 
+
+
 # How to use
-In order to make you 
+
+
+
+
