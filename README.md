@@ -19,7 +19,7 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 
 **Step 5.** Open Thermo Scientific Proteome Discoverer, select the licensing page and click on Scan for Missing Features.
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig2.png" height="400" width="450" title="Find license">
+<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig2.png" height="500" width="600" title="Find license">
 
 **Step 6.** Restart Thermo Scientific Proteome Discoverer.
 
