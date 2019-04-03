@@ -13,7 +13,7 @@ Based on our evaluation, you are able to perform the following experiments with 
 
 # Installation
 
-The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. Please follow the steps belwo for the installation:
+The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. Please follow the steps below for the installation:
 
 **Step 1.** Download the latest version of PDNode.dll from our github repository.
 
@@ -64,9 +64,9 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 | ------------- | ------------- |
 | <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig5.png"> | <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig6.png">|
 
-**Step 3.** When using PeptideProphet, please ensure "Validation Mode=".
+**Step 3.** When using PeptideProphet, please ensure "Validation Mode=Control peptide level error rate (Calculate missing q-values for PSMs)" in PeptideValidator (Consensus Step) such that the q-values are calculated during the validation.
 
 <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig7.png" height="90%" width="90%">
 
-# Processing/Concensus Workflows
-We also provides several processing and concensus workflows for download as references.
+# Processing/Consensus Workflows
+We also provides several processing and consensus workflows for download as references.
