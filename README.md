@@ -33,6 +33,9 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 
 # Requirement
 
-- Input files should be in either mzXML or mzML file formats because MSFragger currently does not support files in .raw format.
-- 
+- Input files should be in either **mzXML or mzML file formats** because MSFragger currently does not support files in .raw format.
+- Please **DO NOT** use "zlib compression" during file conversion because Proteome Discoverer currently does not support the compression function. An example of parameter setting in file conversion using ProteoWizard is shown in the figure below.
+
+<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig4.png" height="60%" width="60%" title="File Conversion">
+
 
