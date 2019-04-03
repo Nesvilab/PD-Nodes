@@ -13,17 +13,17 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 
 >To find out the folder location of Thermo Scientific Proteome Discoverer, please right click on your Thermo Scientific Proteome Discoverer desktop icon and then click on "Properties". The folder path is shown in the field of Target (as the figure shown in below).
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig1.png" height="20%" width="20%" title="Proteome Discoverer Properties">
+<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig1.png" height="40%" width="40%" title="Proteome Discoverer Properties">
 
 **Step 4.** Copy the "PDNode.dll" to the folder. (Please make sure that the old version of PDNode.dll is deleted.)
 
 **Step 5.** Open Thermo Scientific Proteome Discoverer, select the licensing page and click on "Scan for Missing Features".
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig2.png" height="80%" width="80%" title="Find license">
+<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig2.png" height="90%" width="90%" title="Find license">
 
 **Step 6.** Restart Thermo Scientific Proteome Discoverer and you will see MSFragger and PeptideProphet in your processing nodes (as shown below).
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig3.png" height="20%" width="20%" title="MSFragger and PeptideProphet">
+<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig3.png" height="40%" width="40%" title="MSFragger and PeptideProphet">
 
 
 # How to use
