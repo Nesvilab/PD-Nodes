@@ -26,13 +26,8 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig3.png" height="40%" width="40%" title="MSFragger and PeptideProphet">
 
 
-# How to use
+# Requirement
 
-### MSFragger
+- Input files should be in either mzXML or mzML file formats because MSFragger currently does not support files in .raw format.
+- 
 
-Step1. File conversion
-
-
-
-
-### PeptideProphet(Philosopher)
