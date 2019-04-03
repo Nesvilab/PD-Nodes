@@ -15,7 +15,6 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 
 ![Screenshot](https://github.com/Nesvilab/PD-Nodes/tree/master/fig/ProteomeDiscovererProperties.png)
 
-<img src="https://github.com/Nesvilab/PD-Nodes/tree/master/fig/ProteomeDiscovererProperties.png" />
 
 
 **Step 4.** Copy the "PDNode.dll" to the folder. (Please ensure that the old version of PDNode.dll is deleted.)
