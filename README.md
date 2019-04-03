@@ -71,3 +71,4 @@ They can be downloaded from: XXXXXX
 
 
 # Test Data
+You are also welcome download the public HEK293 data set (PXD001468) for testing.
