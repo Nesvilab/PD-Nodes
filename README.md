@@ -27,7 +27,7 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer 2.2. P
 
 <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig2.png" height="90%" width="90%" title="Find license">
 
-**Step 6.** Restart Thermo Scientific Proteome Discoverer and you will see MSFragger and PeptideProphet in your processing nodes (as shown below).
+**Step 6.** Restart Thermo Scientific Proteome Discoverer and you shall see MSFragger and PeptideProphet in your processing nodes (as shown below).
 
 <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig3.png" height="40%" width="40%" title="MSFragger and PeptideProphet">
 
