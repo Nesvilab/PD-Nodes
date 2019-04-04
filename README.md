@@ -71,4 +71,4 @@ They can be downloaded from: https://github.com/Nesvilab/PD-Nodes/tree/master/wo
 
 
 # Test Data
-You are also welcome download the public HEK293 data set ([PXD001468](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD001468)) for testing.
+You are welcome download the public HEK293 data set ([PXD001468](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD001468)) for testing.
