@@ -1,7 +1,7 @@
 # Introduction
 MSFragger, an ultrafast database search tool, has been increasingly used for peptide identification. In an attempt to allow the easy manipulation of MSFragger, we implement this tool as a processing node in Thermo Scientific Proteome Discoverer (PD) such that it can be operated through the graphical user interface of PD. Since Percolator currently lacks the capability of performing peptide-spectrum match (PSM) validation on open searche results, we also implemented Philosopher’s PeptideProphet as a PD processing node. Comparing the search results with SequestHT and Percolator using a public HEK293 data set (PXD001468), using MSFragger and PeptideProphet(Philosopher) makes the processing speed at least four times faster and identifies more proteins/peptide/PSMs.
 
-Based on our evaluation, you are able to perform the following experiments with the two nodes:
+Based on our evaluation, you are able to perform the following experiments with our PD nodes:
 - Closed search on labeling/label-free data
 - Open search on label-free data
 
