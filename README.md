@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 [MSFragger](http://msfragger.nesvilab.org/) is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics. While we provide a stand-alone Graphical User interface [FragPipe](https://fragpipe.nesvilab.org) for running MSFragger, here we describe the implementation of MSFragger as a processing node in the Thermo Scientific Proteome Discoverer (PD) environment. We also provide PeptideProphet (via [Philosopher](https://nesvilab.github.io/philosopher/)) as part of the PD processing node, enabling downstream processing of MSFragger search results in PD using either Percolator or PeptideProphet. 
 
 The following workflows have been tested and should be fully supported with our MSFragger and PeptideProphet(Philosopher) PD nodes:
@@ -8,7 +8,7 @@ The following workflows have been tested and should be fully supported with our 
 Compared to SEQUEST-HT/Percolator (using a publicly available HEK293 data set PXD001468; conventional closed search), MSFragger/PeptideProphet(Philosopher) reduced the total processing speed by at least a factor of four. For open searches, the improvement in the processing speed was much more significant. Using MSFragger instead of SEQUEST-HT (with PeptideProphet or Percolator) also resulted in a significant increase in the number of identified proteins/peptide/PSMs.
 
 
-# Installation of PD nodes
+## Installation of PD nodes
 
 The MSFragger node can be used with Thermo Scientific Proteome Discoverer versions 2.1 and 2.2 (not yet tested with 2.3). 
 
@@ -44,7 +44,7 @@ You will most likely need the following file: philosopher_windows_amd64.exe
 NOTE: the original license agreements for MSFragger and Philosopher also apply when used within the PD environment. 
 
 
-# Requirements
+## Requirements
 
 - Input files should be in either **mzML or mzXML** formats. MSFragger currently does not support files in .RAW format.
 
@@ -55,7 +55,7 @@ IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion becau
 - For searches with multiple PTMs (e.g. phosphorylation) or non-specific digestion searches, MSFragger requires a significant amount of RAM available. For such searches, we recommend at least 32Gb of memory, ideally 64Gb or more. For normal tryptic searches, or open searches, even 16Gb should be sufficient. If you would like to perform searches that require significant amount of RAM, we recommend that you use [FragPipe](https://fragpipe.nesvilab.org) instead. FragPipe provides an option for splitting the protein sequence database, thus circumventing the memory limitations.
 
 
-# How to use
+## How to use
 
 **Step 1.** Select the binary files of MSFragger and Philosopher in their parameter window.
 
@@ -70,12 +70,12 @@ IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion becau
 <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig7.png" height="90%" width="90%">
 
 
-# Processing/Consensus Workflows
+## Processing/Consensus Workflows
 We also provides several processing and consensus workflows for your references.
 They can be downloaded from: https://github.com/Nesvilab/PD-Nodes/tree/master/workflows
 
 
-# Test Data
+## Test Data
 We recommend the following publicly available HEK293 data set ([PXD001468](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD001468)) for testing, since this is what we typically use for testing as well.
 
 ## Documentation
