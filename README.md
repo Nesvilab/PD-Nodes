@@ -72,7 +72,13 @@ IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion becau
 
 
 ## Processing/Consensus Workflows
-We also provides several processing and consensus workflows for your references.
+We also provides three processing workflows and two consensus workflows for your references.
+- Processing_MSFragger_Percolator.pdProcessingWF
+- Processing_MSFragger_PeptideProphet.pdProcessingWF
+- Processing_MSFragger_PeptideProphet_OpenSearch.pdProcessingWF
+- Consensus_Percolator.pdConsensusWF
+- Consensus_PeptideProphet.pdConsensusWF
+
 They can be downloaded from: https://github.com/Nesvilab/PD-Nodes/tree/master/workflows
 
 
