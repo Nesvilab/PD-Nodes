@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Workflow Name="NewMSFragger.pdProcessingWF(Percolator)" Description="" CreationDate="1/1/0001 12:00:00 AM" CreatedFromUser="chuiyin" WaitForEarlierJobs="False" ContinueJob="False" Version="9" WorkflowType="Processing" TemplateName="NewMSFragger.pdProcessingWF(Percolator)">
+	<WorkflowTree>
+		<WorkflowNode ProcessingNodeNumber="0" ProcessingNodeName="SpectrumFilesNode" FriendlyName="Spectrum Files" Description="Selects the spectrum file(s) to be processed." MainVersion="1" MinorVersion="4" Guid="848160ba-2f76-46ca-a281-f7bf66990a5b" Category="Data Input" ParentProcessingNodeNumber="-1" Comment="" Publisher="Thermo Scientific">
+			<ProcessingNodeInterfaces>
+				<ProcessingNodeInterface Kind="Functional" Name="IProcessingNode" />
+				<ProcessingNodeInterface Kind="Functional" Name="IStartProcessing" />
+			</ProcessingNodeInterfaces>
+			<ConnectionPoints>
+				<ConnectionPoint Direction="Outgoing" Multiplicity="Multiple" ConnectionRequirement="Optional" Mode="Manual" DisplayName="" ConnectionDataHandlingType="InMemory" ParentNodeConstraint="None">
+					<DataContracts>
+						<DataContract DataType="http://thermo.magellan.com/owl/DataTypes/SpectrumFiles">
+							<DataTypeAttributes />
+						</DataContract>
+					</DataContracts>
+				</ConnectionPoint>
+			</ConnectionPoints>
+			<ProcessingNodeParameters>
+				<ProcessingNodeParameter Name="SpectrumFileNames" FriendlyName="File Name(s)" Category="Input Data" IsAdvanced="False" IntendedPurpose="SpectrumContainer" PurposeDetails="" IsValueSet="False" IsHidden="True" IsConfig="False" DisplayValue=""></ProcessingNodeParameter>
+			</ProcessingNodeParameters>
+		</WorkflowNode>
+		<WorkflowNode ProcessingNodeNumber="1" ProcessingNodeName="SpectrumSelectorNode" FriendlyName="Spectrum Selector" Description="Selects and retrieves the spectra for further processing." MainVersion="1" MinorVersion="27" Guid="238d2f70-3dd9-4e2b-a77d-f24933797cf6" Category="Spectrum Retrieval" ParentProcessingNodeNumber="0" Comment="" Publisher="Thermo Scientific">
+			<ProcessingNodeInterfaces>
+				<ProcessingNodeInterface Kind="Functional" Name="IProcessingNode" />
+			</ProcessingNodeInterfaces>
+			<ConnectionPoints>
+				<ConnectionPoint Direction="Outgoing" Multiplicity="Multiple" ConnectionRequirement="Optional" Mode="Manual" DisplayName="" ConnectionDataHandlingType="InMemory" ParentNodeConstraint="None">
+					<DataContracts>
+						<DataContract DataType="http://thermo.magellan.com/owl/DataTypes/MSnSpectra">
+							<DataTypeAttributes />
+						</DataContract>
+					</DataContracts>
+				</ConnectionPoint>
+				<ConnectionPoint Direction="Incoming" Multiplicity="Multiple" ConnectionRequirement="RequiredAtDesignTime" Mode="AutomaticToAllPossibleParents" DisplayName="Data Input" ConnectionDataHandlingType="InMemory" ParentNodeConstraint="None">
+					<DataContracts>
+						<DataContract DataType="http://thermo.magellan.com/owl/DataTypes/SpectrumFiles">
+							<DataTypeAttributes />
+						</DataContract>
+					</DataContracts>
+				</ConnectionPoint>
+			</ConnectionPoints>
+			<ProcessingNodeParameters>
+				<ProcessingNodeParameter Name="PrecursorSelectionStrategy" FriendlyName="Precursor Selection" Category="1. General Settings" IsAdvanced="False" IntendedPurpose="PrecursorSelectionStrategy" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Use MS1 Precursor">Use MS1 Precursor</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UseNewPrecursorPeakReevaluation" FriendlyName="Use New Precursor Reevaluation" Category="1. General Settings" IsAdvanced="True" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="True">True</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UseIsotopePatternInPrecursorPeakReevaluation" FriendlyName="Use Isotope Pattern in Precursor Reevaluation" Category="1. General Settings" IsAdvanced="True" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="True">True</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="StoreChromatograms" FriendlyName="Store Chromatograms" Category="1. General Settings" IsAdvanced="True" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="True" IsConfig="False" DisplayValue="True">True</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="LowerRetentionTimeLimit" FriendlyName="Lower RT Limit" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="LowestRetentionTimeToProcess" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UpperRetentionTimeLimit" FriendlyName="Upper RT Limit" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="HighestRetentionTimeToProcess" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="FirstScan" FriendlyName="First Scan" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="FirstScanToProcess" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="LastScan" FriendlyName="Last Scan" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="LastScanToProcess" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="RemoveSpecifiedScans" FriendlyName="Ignore Specified Scans" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue=""></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="LowestChargeState" FriendlyName="Lowest Charge State" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="HighestChargeState" FriendlyName="Highest Charge State" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="MinimumPrecursorMass" FriendlyName="Min. Precursor Mass" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="MinimumPrecursorMassToProcess" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="350 Da">350 Da</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="MaximumPrecursorMass" FriendlyName="Max. Precursor Mass" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="MaximumPrecursorMassToProcess" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="5000 Da">5000 Da</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="TotalIntensityThreshold" FriendlyName="Total Intensity Threshold" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="MinimumPeakCount" FriendlyName="Minimum Peak Count" Category="2. Spectrum Properties Filter" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="1">1</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="MassAnalyzerFilter" FriendlyName="Mass Analyzer" Category="3. Scan Event Filters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="(Not specified)">(Not specified)</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="MSOrderFilter" FriendlyName="MS Order" Category="3. Scan Event Filters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Is Not MS1">Is Not MS1</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ActivationTypeFilter" FriendlyName="Activation Type" Category="3. Scan Event Filters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="(Not specified)">(Not specified)</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="MinimumCollisionEnergy" FriendlyName="Min. Collision Energy" Category="3. Scan Event Filters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="MaximumCollisionEnergy" FriendlyName="Max. Collision Energy" Category="3. Scan Event Filters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="1000">1000</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ScanTypeFilter" FriendlyName="Scan Type" Category="3. Scan Event Filters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Is Full">Is Full</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PolarityFilter" FriendlyName="Polarity Mode" Category="3. Scan Event Filters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="(Not specified)">(Not specified)</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="SignalToNoiseThreshold" FriendlyName="S/N Threshold (FT-only)" Category="4. Peak Filters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="1.5">1.5</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UnrecognizedChargeReplacements" FriendlyName="Unrecognized Charge Replacements" Category="5. Replacements for Unrecognized Properties" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Automatic">Automatic</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UnrecognizedMassAnalyzerReplacement" FriendlyName="Unrecognized Mass Analyzer Replacements" Category="5. Replacements for Unrecognized Properties" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="ITMS">ITMS</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UnrecognizedMsOrderReplacement" FriendlyName="Unrecognized MS Order Replacements" Category="5. Replacements for Unrecognized Properties" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="MS2">MS2</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UnrecognizedActivationTypeReplacement" FriendlyName="Unrecognized Activation Type Replacements" Category="5. Replacements for Unrecognized Properties" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="CID">CID</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UnrecognizedPolarityTypeReplacement" FriendlyName="Unrecognized Polarity Replacements" Category="5. Replacements for Unrecognized Properties" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="+">+</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UnrecognizedMSResolutionReplacement" FriendlyName="Unrecognized MS Resolution@200 Replacements" Category="5. Replacements for Unrecognized Properties" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="60000">60000</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UnrecognizedMSnResolutionReplacement" FriendlyName="Unrecognized MSn Resolution@200 Replacements" Category="5. Replacements for Unrecognized Properties" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="30000">30000</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PrecursorClippingRangeBefore" FriendlyName="Precursor Clipping Range Before" Category="6. Precursor Pattern Extraction" IsAdvanced="True" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="2.5 Da">2.5 Da</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PrecursorClippingRangeAfter" FriendlyName="Precursor Clipping Range After" Category="6. Precursor Pattern Extraction" IsAdvanced="True" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="5.5 Da">5.5 Da</ProcessingNodeParameter>
+			</ProcessingNodeParameters>
+		</WorkflowNode>
+		<WorkflowNode ProcessingNodeNumber="13" ProcessingNodeName="MSFragger" FriendlyName="MSFragger" Description="An ultrafast database search tool for peptide identifications in mass spectrometry - based proteomics." MainVersion="1" MinorVersion="1" Guid="eab57e72-ae0b-423e-8669-5d614c86e9ca" Category="Sequence Database Search" ParentProcessingNodeNumber="1" Comment="" Publisher="Nesvi">
+			<ProcessingNodeInterfaces>
+				<ProcessingNodeInterface Kind="Functional" Name="IProcessingNode" />
+				<ProcessingNodeInterface Kind="Functional" Name="IPeptideAssignerNode" />
+			</ProcessingNodeInterfaces>
+			<ConnectionPoints>
+				<ConnectionPoint Direction="Incoming" Multiplicity="Single" ConnectionRequirement="RequiredAtDesignTime" Mode="Manual" DisplayName="Spectrum Retrieval" ConnectionDataHandlingType="InMemory" ParentNodeConstraint="None">
+					<DataContracts>
+						<DataContract DataType="http://thermo.magellan.com/owl/DataTypes/MSnSpectra">
+							<DataTypeAttributes />
+						</DataContract>
+					</DataContracts>
+				</ConnectionPoint>
+				<ConnectionPoint Direction="Outgoing" Multiplicity="Single" ConnectionRequirement="RequiredAtDesignTime" Mode="Manual" DisplayName="PSM Validation" ConnectionDataHandlingType="FileBased" ParentNodeConstraint="None">
+					<DataContracts>
+						<DataContract DataType="http://thermo.magellan.com/owl/DataTypes/Psms">
+							<DataTypeAttributes>
+								<DataTypeAttribute>http://thermo.magellan.com/owl/DataTypes/ScoredWithNativeScore</DataTypeAttribute>
+								<DataTypeAttribute>http://thermo.magellan.com/owl/DataTypes/WithDecoys</DataTypeAttribute>
+							</DataTypeAttributes>
+						</DataContract>
+						<DataContract DataType="http://thermo.magellan.com/owl/DataTypes/Proteins">
+							<DataTypeAttributes>
+								<DataTypeAttribute>http://thermo.magellan.com/owl/DataTypes/WithDecoys</DataTypeAttribute>
+							</DataTypeAttributes>
+						</DataContract>
+					</DataContracts>
+				</ConnectionPoint>
+			</ConnectionPoints>
+			<ProcessingNodeParameters>
+				<ProcessingNodeParameter Name="MSFrager_file_path" FriendlyName="MSFragger File Path" Category="1. Input Data" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="D:\1_Research\1_PD_Plugin\6_Software\msfragger-20190118.one-jar.jar">D:\1_Research\1_PD_Plugin\6_Software\msfragger-20190118.one-jar.jar</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="database_name" FriendlyName="Protein Database" Category="1. Input Data" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Gygi_UniProt_Human_ReviewOnly_20181217.fasta">Gygi_UniProt_Human_ReviewOnly_20181217.fasta</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="RAM" FriendlyName="RAM (GB)" Category="1. Input Data" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="16">16</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="num_threads" FriendlyName="Threads" Category="1. Input Data" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="precursor_mass_tolerance_lower" FriendlyName="Precursor Mass Tolerance (Lower)" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="-50">-50</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="precursor_mass_tolerance_upper" FriendlyName="Precursor Mass Tolerance (Upper)" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="PrecursorMassTolerance" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="50 ppm">50 ppm</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="precursor_true_tolerance" FriendlyName="Precursor True Tolerance" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="20 ppm">20 ppm</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="fragment_mass_tolerance" FriendlyName="Fragment Mass Tolerance" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="20 ppm">20 ppm</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="isotope_error" FriendlyName="Isotope Error" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0/1/2">0/1/2</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="mass_offsets" FriendlyName="Mass Offsets" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="shifted_ions" FriendlyName="Shifted Ions" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="shifted_ions_exclude_ranges" FriendlyName="Shifted Ions Exclude Ranges" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="(-1.5,3.5)">(-1.5,3.5)</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="min_precursor_charge" FriendlyName="Min. Precursor Charge" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="1">1</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="max_precursor_charge" FriendlyName="Max. Precursor Charge" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="4">4</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="override_charge" FriendlyName="Override Charge" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="False">False</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="output_max_expect" FriendlyName="Output Max. Expect" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="50">50</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="output_report_topN" FriendlyName="Report Top N" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="1">1</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="output_file_extension" FriendlyName="Output File Extension" Category="2. Matching Configuration" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="pepXML">pepXML</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="search_enzyme_name" FriendlyName="Enzyme Name" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Trypsin">Trypsin</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="search_enzyme_cutafter" FriendlyName="Enzyme Cutafter" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="KR">KR</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="search_enzyme_butnotafter" FriendlyName="Enzyme Butnotafter" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="P">P</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="num_enzyme_termini" FriendlyName="Cleavage" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Enzymatic">Enzymatic</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="digest_min_length" FriendlyName="Min. Peptide Length" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="7">7</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="digest_max_length" FriendlyName="Max. Peptide Length" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="50">50</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="allowed_missed_cleavage" FriendlyName="Max. Missed Cleavage Sites" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="2">2</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="min_digest_mass_range" FriendlyName="Min. Peptide Mass" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="500">500</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="max_digest_mass_range" FriendlyName="Max. Peptide Mass" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="5000">5000</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="max_fragment_charge" FriendlyName="Max. Fragment Charge" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="2">2</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="clip_nTerm_M" FriendlyName="Clip nTerm M" Category="3. Digestion" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="True">True</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="minimum_peaks" FriendlyName="Min. Peaks" Category="4. Spectral Processing" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="15">15</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="min_fragments_modelling" FriendlyName="Min. Fragments Modelling" Category="4. Spectral Processing" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="3">3</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="minimum_ratio" FriendlyName="Min. Ratio" Category="4. Spectral Processing" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0.01">0.01</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="use_topN_peaks" FriendlyName="Use Top N Peaks" Category="4. Spectral Processing" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="100">100</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="min_matched_fragments" FriendlyName="Min. Matched Fragments" Category="4. Spectral Processing" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="4">4</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="min_clear_mz_range" FriendlyName="Min. Clear m/z Range" Category="4. Spectral Processing" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="max_clear_mz_range" FriendlyName="Max. Clear m/z Range" Category="4. Spectral Processing" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="track_zero_topN" FriendlyName="Track Zero Top N" Category="5. Open Search Parameters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="zero_bin_accept_expect" FriendlyName="Zero Bin Accept Expect" Category="5. Open Search Parameters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="zero_bin_mult_expect" FriendlyName="Zero Bin Mult Expect" Category="5. Open Search Parameters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="1">1</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="add_topN_complementary" FriendlyName="Add TopN Complementary" Category="5. Open Search Parameters" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="allow_multiple_variable_mods_on_residue" FriendlyName="Multiple Variable Mods on Residue" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="True">True</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="max_variable_mods_per_mod" FriendlyName="Max. Variable Mods per Mod" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="3">3</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="max_variable_mods_combinations" FriendlyName="Max. Variable Mods Combinations" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="Unknown" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="5000">5000</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DynamicModification1" FriendlyName="1. Dynamic Modification" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="DynamicModification" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Oxidation / +15.995 Da (M)">&lt;Modification Version=&quot;2&quot; AminoAcids=&quot;M&quot; Name=&quot;Oxidation&quot; Abbreviation=&quot;Oxidation&quot; ID=&quot;45&quot; UnimodAccession=&quot;35&quot; DeltaMass=&quot;15.99492&quot; DeltaAverageMass=&quot;15.99940&quot; IsSubstitution=&quot;False&quot; LeavingGroup=&quot;&quot; Substitution=&quot;O&quot; PositionType=&quot;Any&quot; /&gt;</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DynamicModification2" FriendlyName="2. Dynamic Modification" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="DynamicModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DynamicModification3" FriendlyName="3. Dynamic Modification" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="DynamicModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DynamicModification4" FriendlyName="4. Dynamic Modification" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="DynamicModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DynamicModification5" FriendlyName="5. Dynamic Modification" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="DynamicModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DynamicModification6" FriendlyName="6. Dynamic Modification" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="DynamicModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DynamicModification7" FriendlyName="7. Dynamic Modification" Category="6. Modifications" IsAdvanced="False" IntendedPurpose="DynamicModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PeptideNTermDyMod1" FriendlyName="1. N-Terminal Modification" Category="7. Dynamic Modifications (peptide terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PeptideNTermDyMod2" FriendlyName="2. N-Terminal Modification" Category="7. Dynamic Modifications (peptide terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PeptideNTermDyMod3" FriendlyName="3. N-Terminal Modification" Category="7. Dynamic Modifications (peptide terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PeptideCTermDyMod1" FriendlyName="1. C-Terminal Modification" Category="7. Dynamic Modifications (peptide terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PeptideCTermDyMod2" FriendlyName="2. C-Terminal Modification" Category="7. Dynamic Modifications (peptide terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PeptideCTermDyMod3" FriendlyName="3. C-Terminal Modification" Category="7. Dynamic Modifications (peptide terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ProteinNTermDyMod1" FriendlyName="1. N-Terminal Modification" Category="8. Dynamic Modifications (protein terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Acetyl / +42.011 Da (Protein N-Terminus)">&lt;Modification Version=&quot;1&quot; Terminus=&quot;Protein_N_Terminus&quot; Name=&quot;Acetyl&quot; Abbreviation=&quot;Acetyl&quot; ID=&quot;2&quot; UnimodAccession=&quot;1&quot; DeltaMass=&quot;42.01057&quot; DeltaAverageMass=&quot;42.03670&quot; IsSubstitution=&quot;False&quot; LeavingGroup=&quot;&quot; Substitution=&quot;H(2) C(2) O&quot; PositionType=&quot;Protein_N_Terminus&quot; /&gt;</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ProteinNTermDyMod2" FriendlyName="2. N-Terminal Modification" Category="8. Dynamic Modifications (protein terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ProteinNTermDyMod3" FriendlyName="3. N-Terminal Modification" Category="8. Dynamic Modifications (protein terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ProteinCTermDyMod1" FriendlyName="1. C-Terminal Modification" Category="8. Dynamic Modifications (protein terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ProteinCTermDyMod2" FriendlyName="2. C-Terminal Modification" Category="8. Dynamic Modifications (protein terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ProteinCTermDyMod3" FriendlyName="3. C-Terminal Modification" Category="8. Dynamic Modifications (protein terminus)" IsAdvanced="False" IntendedPurpose="DynamicTerminalModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PeptideNTermStaticMod1" FriendlyName="Peptide N-Terminus" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="PeptideCTermStaticMod1" FriendlyName="Peptide C-Terminus" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ProteinNTermStaticMod1" FriendlyName="Protein N-Terminus" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ProteinCTermStaticMod1" FriendlyName="Protein C-Terminus" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="StaticModification1" FriendlyName="1. Static Modification" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="Carbamidomethyl / +57.021 Da (C)">&lt;Modification Version=&quot;2&quot; AminoAcids=&quot;C&quot; Name=&quot;Carbamidomethyl&quot; Abbreviation=&quot;Carbamidomethyl&quot; ID=&quot;8&quot; UnimodAccession=&quot;4&quot; DeltaMass=&quot;57.02146&quot; DeltaAverageMass=&quot;57.05130&quot; IsSubstitution=&quot;False&quot; LeavingGroup=&quot;&quot; Substitution=&quot;H(3) C(2) N O&quot; PositionType=&quot;Any&quot; /&gt;</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="StaticModification2" FriendlyName="2. Static Modification" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="StaticModification3" FriendlyName="3. Static Modification" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="StaticModification4" FriendlyName="4. Static Modification" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="StaticModification5" FriendlyName="5. Static Modification" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="StaticModification6" FriendlyName="6. Static Modification" Category="9. Static Modifications" IsAdvanced="False" IntendedPurpose="StaticModification" PurposeDetails="" IsValueSet="False" IsHidden="False" IsConfig="False" DisplayValue="None"></ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DecoySearch" FriendlyName="Search Against Decoy Database" Category="Decoy Database Search" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose/PerformDecoySearch" IsValueSet="True" IsHidden="True" IsConfig="False" DisplayValue="True">True</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ConcatenatedFdrCalculation" FriendlyName="ConcatenatedFdrCalculation" Category="Decoy Database Search" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose/ConcatenatedCalculation" IsValueSet="True" IsHidden="True" IsConfig="False" DisplayValue="False">False</ProcessingNodeParameter>
+			</ProcessingNodeParameters>
+		</WorkflowNode>
+		<WorkflowNode ProcessingNodeNumber="12" ProcessingNodeName="PercolatorNode" FriendlyName="Percolator" Description="Calculates posterior error probabilities and q-values for the identified PSMs using Percolator." MainVersion="3" MinorVersion="0" Guid="edabd112-fc32-4d12-bb89-7bd90e3bb935" Category="PSM Validation" ParentProcessingNodeNumber="13" Comment="" Publisher="Thermo Scientific">
+			<ProcessingNodeInterfaces>
+				<ProcessingNodeInterface Kind="Functional" Name="IProcessingNode" />
+			</ProcessingNodeInterfaces>
+			<ConnectionPoints>
+				<ConnectionPoint Direction="Incoming" Multiplicity="Multiple" ConnectionRequirement="RequiredAtDesignTime" Mode="Manual" DisplayName="Sequence Database Search" ConnectionDataHandlingType="FileBased" ParentNodeConstraint="OnlyToGeneratorsOfRequestedData">
+					<DataContracts>
+						<DataContract DataType="http://thermo.magellan.com/owl/DataTypes/Psms">
+							<DataTypeAttributes>
+								<DataTypeAttribute>http://thermo.magellan.com/owl/DataTypes/WithDecoys</DataTypeAttribute>
+							</DataTypeAttributes>
+						</DataContract>
+					</DataContracts>
+				</ConnectionPoint>
+				<ConnectionPoint Direction="Outgoing" Multiplicity="Multiple" ConnectionRequirement="Optional" Mode="Manual" DisplayName="PSM Validation" ConnectionDataHandlingType="FileBased" ParentNodeConstraint="None">
+					<DataContracts>
+						<DataContract DataType="http://thermo.magellan.com/owl/DataTypes/Psms">
+							<DataTypeAttributes>
+								<DataTypeAttribute>http://thermo.magellan.com/owl/DataTypes/ScoredWithPEP</DataTypeAttribute>
+								<DataTypeAttribute>http://thermo.magellan.com/owl/DataTypes/ScoredWithQValue</DataTypeAttribute>
+								<DataTypeAttribute>http://thermo.magellan.com/owl/DataTypes/Validated</DataTypeAttribute>
+							</DataTypeAttributes>
+						</DataContract>
+					</DataContracts>
+				</ConnectionPoint>
+			</ConnectionPoints>
+			<ProcessingNodeParameters>
+				<ProcessingNodeParameter Name="MaximumDeltaCn" FriendlyName="Maximum Delta Cn" Category="1. Input Data" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose/DeltaCnThreshold" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0.05">0.05</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="MaximumRank" FriendlyName="Maximum Rank" Category="1. Input Data" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose/RankThreshold" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0">0</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="UseDecoyDatabase" FriendlyName="Search Against Decoy Database" Category="2. Decoy Database Search" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose/PerformDecoySearch" IsValueSet="True" IsHidden="True" IsConfig="False" DisplayValue="True">True</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="TargetFPRHigh" FriendlyName="Target FDR (Strict)" Category="2. Decoy Database Search" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose/HighConfidenceTarget" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0.01">0.01</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="TargetFPRMiddle" FriendlyName="Target FDR (Relaxed)" Category="2. Decoy Database Search" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose/MiddleConfidenceTarget" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="0.05">0.05</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="ValidationBasedOn" FriendlyName="Validation based on" Category="2. Decoy Database Search" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose.PercolatorConfidenceAssignment" IsValueSet="True" IsHidden="False" IsConfig="False" DisplayValue="q-Value">q-Value</ProcessingNodeParameter>
+				<ProcessingNodeParameter Name="DefaultFalseDiscoveryRateCalculator" FriendlyName="Default FDR Calculator" Category="2. Decoy Database Search" IsAdvanced="False" IntendedPurpose="PeptideValidation" PurposeDetails="PeptideValidationPurpose/DefaultFDRCalculator" IsValueSet="True" IsHidden="True" IsConfig="False" DisplayValue="D0E5CE92-ABF5-43F1-8D0F-C17FC9194D99">D0E5CE92-ABF5-43F1-8D0F-C17FC9194D99</ProcessingNodeParameter>
+			</ProcessingNodeParameters>
+		</WorkflowNode>
+	</WorkflowTree>
+</Workflow>
