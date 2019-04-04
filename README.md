@@ -1,5 +1,5 @@
 # Introduction
-MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics. While we provide a stand-alone Graphical User interface FragPipe for running MSFragger, here we describe the implementation of MSFragger as a processing node in the Thermo Scientific Proteome Discoverer (PD) environment. We also provide PeptideProphet(Philosopher) as part of the PD processing node, enabling downstream processing of MSFragger search results in PD using either Percolator or PeptideProphet. 
+MSFragger is an ultrafast database search tool for peptide identifications in mass spectrometry-based proteomics. While we provide a stand-alone Graphical User interface FragPipe for running MSFragger, here we describe the implementation of MSFragger as a processing node in the Thermo Scientific Proteome Discoverer (PD) environment. We also provide PeptideProphet([Philosopher](https://nesvilab.github.io/philosopher/)) as part of the PD processing node, enabling downstream processing of MSFragger search results in PD using either Percolator or PeptideProphet. 
 
 The following workflows have been tested and should be fully supported with our MSFragger and PeptideProphet(Philosopher) PD nodes:
 - Conventional closed search, label-free or labeling based (e.g. TMT)
@@ -41,7 +41,7 @@ Please follow instructions for obtaining the JAR binary file of MSFragger.
 > Philosopher: https://github.com/Nesvilab/philosopher
 You will most likely need the following file:  philosopher_windows_amd64.exe
 
-NOTE: the original license agreements for MSFragger and Philosopher apply when used within the PD enviroment. 
+NOTE: the original license agreements for MSFragger and Philosopher apply when used within the PD environment. 
 
 
 # Requirements
@@ -59,7 +59,7 @@ IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion becau
 
 **Step 1.** Select the binary files of MSFragger and Philosopher in their parameter window.
 
-**Step 2.** Import your protein fasta file via "Maintain FASTA Files" in PD. Specify the database in both MSFragger and (if used) Peptideprophet nodes.
+**Step 2.** Import your protein fasta file via "Maintain FASTA Files" in PD. Specify the database in both MSFragger and (if used) PeptideProphet nodes.
 
 | MSFragger  | Philosopher |
 | ------------- | ------------- |
