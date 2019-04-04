@@ -73,11 +73,11 @@ IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion becau
 
 ## Processing/Consensus Workflows
 We also provides three processing workflows and two consensus workflows for your references.
-- Processing_MSFragger_Percolator.pdProcessingWF
-- Processing_MSFragger_PeptideProphet.pdProcessingWF
-- Processing_MSFragger_PeptideProphet_OpenSearch.pdProcessingWF
-- Consensus_Percolator.pdConsensusWF
-- Consensus_PeptideProphet.pdConsensusWF
+- Processing_MSFragger_Percolator.pdProcessingWF: Use MSFragger and Percolator for conventional closed search.
+- Processing_MSFragger_PeptideProphet.pdProcessingWF: Use MSFragger and PeptideProphet for conventional closed search.
+- Processing_MSFragger_PeptideProphet_OpenSearch.pdProcessingWF: Use MSFragger and PeptideProphet for open search.
+- Consensus_Percolator.pdConsensusWF: The consensus workflow for MSFragger and Percolator.
+- Consensus_PeptideProphet.pdConsensusWF: The consensus workflor for PeptideProphet.
 
 They can be downloaded from: https://github.com/Nesvilab/PD-Nodes/tree/master/workflows
 
