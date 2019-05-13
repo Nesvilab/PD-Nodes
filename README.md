@@ -81,6 +81,7 @@ We also provides three processing workflows and two consensus workflows for your
 
 They can be downloaded from: https://github.com/Nesvilab/PD-Nodes/tree/master/workflows
 
+NOTE: Because of the minor version difference (e.g., PD v2.2.0.385 and PD v2.2.0.388), the workflows sometimes may fail to be used even using the same PD version. The MSFrager parameter files (for closed and open searches) are thus provided along with the workflows for your reference.
 
 ## Test Data
 We recommend the following publicly available HEK293 data set ([PXD001468](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD001468)) for testing, since this is what we typically use for testing as well.
