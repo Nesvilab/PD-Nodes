@@ -79,7 +79,7 @@ We also provides three processing workflows and two consensus workflows for your
 - Consensus_Percolator.pdConsensusWF: The consensus workflow for MSFragger and Percolator.
 - Consensus_PeptideProphet.pdConsensusWF: The consensus workflor for PeptideProphet.
 
-They can be downloaded from: https://github.com/Nesvilab/PD-Nodes/tree/master/workflows
+They can be downloaded from: https://github.com/Nesvilab/PD-Nodes/releases (along with the dll files).
 
 NOTE: Because of the minor version difference (e.g., PD v2.2.0.385 and PD v2.2.0.388), the workflows sometimes may fail to be used even using the same PD version. The MSFrager parameter files (for closed and open searches) are thus provided along with the workflows for your reference.
 
