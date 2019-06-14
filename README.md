@@ -47,6 +47,8 @@ NOTE: the original license agreements for MSFragger and Philosopher also apply w
 
 ## Requirements
 
+- [Java SE Runtime Environment 8 (or above)](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) is required to be installed prior to use MSFragger-PD node. 
+
 - Input files should be in either **mzML or mzXML** formats. MSFragger currently does not support files in .RAW format.
 
 IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion because Proteome Discoverer currently does not support the compression function. An example of parameter setting in file conversion using ProteoWizard/MSconvert is shown in the Figure.
