@@ -22,7 +22,7 @@ https://github.com/nesvilab/PD-Nodes/releases/
 **Step 3.** Open the folder where Thermo Scientific Proteome Discoverer is installed.
 To find the folder location of Thermo Scientific Proteome Discoverer, please right click on your Thermo Scientific Proteome Discoverer desktop icon and then click on "Properties". The folder path is shown in the field called Target (as shown in the Figure).
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig1.png" height="40%" width="40%" title="Proteome Discoverer Properties">
+<img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig1.png" height="40%" width="40%" title="Proteome Discoverer Properties">
 
 **Step 4.** Copy "MSFragger-PD.dll" to that folder. Please make sure to delete any old versions of MSFragger-PD.dll.
 
