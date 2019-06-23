@@ -28,7 +28,7 @@ To find the folder location of Thermo Scientific Proteome Discoverer, please rig
 
 **Step 5.** Open Thermo Scientific Proteome Discoverer, select the licensing page and click on "Scan for Missing Features".
 
-<img src=https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig2.png" height="90%" width="90%" title="Find license">
+<img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig2.png" height="90%" width="90%" title="Find license">
 
 **Step 6.** Restart Thermo Scientific Proteome Discoverer and you should see MSFragger and PeptideProphet in your processing nodes (as shown in the Figure).
 
