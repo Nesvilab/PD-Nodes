@@ -28,11 +28,11 @@ To find the folder location of Thermo Scientific Proteome Discoverer, please rig
 
 **Step 5.** Open Thermo Scientific Proteome Discoverer, select the licensing page and click on "Scan for Missing Features".
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig2.png" height="90%" width="90%" title="Find license">
+<img src=https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig2.png" height="90%" width="90%" title="Find license">
 
 **Step 6.** Restart Thermo Scientific Proteome Discoverer and you should see MSFragger and PeptideProphet in your processing nodes (as shown in the Figure).
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig3.png" height="40%" width="40%" title="MSFragger and PeptideProphet">
+<img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig3.png" height="40%" width="40%" title="MSFragger and PeptideProphet">
 
 **Step 7.** Download the latest versions of MSFragger and Philosopher tools from the corresponding GitHub repositories. They are NOT included with the MSFragger-PD.dll wrapper program.
 
@@ -53,7 +53,7 @@ NOTE: the original license agreements for MSFragger and Philosopher also apply w
 
 IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion because Proteome Discoverer currently does not support the compression function. An example of parameter setting in file conversion using ProteoWizard/MSconvert is shown in the Figure.
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig4.png" height="60%" width="60%" title="File Conversion">
+<img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig4.png" height="60%" width="60%" title="File Conversion">
 
 - For searches with multiple PTMs (e.g. phosphorylation) or non-specific digestion searches, MSFragger requires a significant amount of RAM available. For such searches, we recommend at least 32Gb of memory, ideally 64Gb or more. For normal tryptic searches, or open searches, even 16Gb should be sufficient. If you would like to perform searches that require significant amount of RAM, we recommend that you use [FragPipe](https://fragpipe.nesvilab.org) instead. FragPipe provides an option for splitting the protein sequence database, thus circumventing the memory limitations.
 
@@ -66,11 +66,11 @@ IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion becau
 
 | MSFragger  | Philosopher |
 | ------------- | ------------- |
-| <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig5.png"> | <img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig6.png">|
+| <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig5.png"> | <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig6.png">|
 
 **Step 3.** When using PeptideProphet, please ensure "Validation Mode=Control peptide level error rate (Calculate missing q-values for PSMs)" in PeptideValidator (Consensus Step) such that the q-values are calculated during the validation.
 
-<img src="https://github.com/Nesvilab/PD-Nodes/blob/master/fig7.png" height="90%" width="90%">
+<img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig7.png" height="90%" width="90%">
 
 
 ## Processing/Consensus Workflows
