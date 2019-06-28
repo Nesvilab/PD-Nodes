@@ -51,7 +51,7 @@ NOTE: the original license agreements for MSFragger and Philosopher also apply w
 
 - Input files can be **RAW, mzML, mzXML** formats.
 
-IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion because Proteome Discoverer currently does not support the compression function. An example of parameter setting in file conversion using ProteoWizard/MSconvert is shown in the Figure.
+IMPORTANT: If you choose to use mzML format (instead of RAW), please **DO NOT** use "zlib compression" during file conversion because Proteome Discoverer currently does not support the compression function. An example of parameter setting in file conversion using ProteoWizard/MSconvert is shown in the Figure.
 
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig4.png" height="60%" width="60%" title="File Conversion">
 
