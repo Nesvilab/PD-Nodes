@@ -66,7 +66,7 @@ IMPORTANT: Please **DO NOT** use "zlib compression" during file conversion becau
 
 | MSFragger  | Philosopher |
 | ------------- | ------------- |
-| <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig8.png"> | <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig9.png">|
+| <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig5.png"> | <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig9.png">|
 
 **Step 3.** When using PeptideProphet, please ensure "Validation Mode=Control peptide level error rate (Calculate missing q-values for PSMs)" in PeptideValidator (Consensus Step) such that the q-values are calculated during the validation.
 
