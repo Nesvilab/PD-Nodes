@@ -36,10 +36,10 @@ To find the folder location of Thermo Scientific Proteome Discoverer, please rig
 
 **Step 7.** Download the latest versions of MSFragger and Philosopher tools from the corresponding GitHub repositories. They are NOT included with the MSFragger-PD.dll wrapper program.
 
-> MSFragger: [https://github.com/Nesvilab/MSFragger](https://github.com/Nesvilab/MSFragger)
+> MSFragger: [https://github.com/Nesvilab/MSFragger](https://msfragger.nesvilab.org/)
 Please follow instructions for obtaining the JAR binary file of MSFragger. 
 
-> Philosopher: [https://github.com/Nesvilab/philosopher](https://github.com/Nesvilab/philosopher)
+> Philosopher: [https://github.com/Nesvilab/philosopher](https://philosopher.nesvilab.org/)
 You will most likely need the following file: philosopher_windows_amd64.exe
 
 NOTE: the original license agreements for MSFragger and Philosopher also apply when used within the PD environment. 
