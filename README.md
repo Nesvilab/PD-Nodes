@@ -14,8 +14,8 @@ The MSFragger node can be used with Thermo Scientific Proteome Discoverer versio
 
 Please follow the steps below for the installation:
 
-**Step 1.** Download the latest version of MSFragger-PD.dll from our github repository:
-https://github.com/nesvilab/PD-Nodes/releases/
+**Step 1.** Download the latest version of MSFragger-PDv22.rar or MSFragger-PDv23 (depending on your version of Proteome Discoverer) from our github [repository](https://github.com/nesvilab/PD-Nodes/releases/) and unzip/decompress the file.
+
 
 **Step 2.** Make sure that Thermo Scientific Proteome Discoverer on your computer is closed.
 
@@ -24,7 +24,7 @@ To find the folder location of Thermo Scientific Proteome Discoverer, please rig
 
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig1.png" height="40%" width="40%" title="Proteome Discoverer Properties">
 
-**Step 4.** Copy "MSFragger-PD.dll" to that folder. Please make sure to delete any old versions of MSFragger-PD.dll.
+**Step 4.** Copy "MSFragger-PD.dll" from the unzipped file to that folder. Please make sure to delete any old versions of MSFragger-PD.dll.
 
 **Step 5.** Open Thermo Scientific Proteome Discoverer, select the licensing page and click on "Scan for Missing Features".
 
@@ -74,16 +74,15 @@ IMPORTANT: If you choose to use mzML format (instead of RAW), please **DO NOT** 
 
 
 ## Processing/Consensus Workflows
-We also provides three processing workflows and two consensus workflows for your references.
+We also provides three processing workflows and two consensus workflows for your reference, these can be found in the .rar files you downloaded [here](https://github.com/Nesvilab/PD-Nodes/releases).
 - Processing_MSFragger_Percolator_ClosedSearch.pdProcessingWF: Use MSFragger and Percolator for conventional closed search.
 - Processing_MSFragger_PeptideProphet_ClosedSearch.pdProcessingWF: Use MSFragger and PeptideProphet for conventional closed search.
 - Processing_MSFragger_PeptideProphet_OpenSearch.pdProcessingWF: Use MSFragger and PeptideProphet for open search.
 - Consensus_Percolator.pdConsensusWF: The consensus workflow for MSFragger and Percolator.
 - Consensus_PeptideProphet.pdConsensusWF: The consensus workflor for PeptideProphet.
 
-They can be downloaded from: [https://github.com/Nesvilab/PD-Nodes/releases](https://github.com/Nesvilab/PD-Nodes/releases) (along with the dll files).
 
-NOTE: Because of the minor version difference (e.g., PD v2.2.0.385 and PD v2.2.0.388), the workflows sometimes may fail to be used even using the same PD version. The MSFrager parameter files (for closed and open searches) are thus provided along with the workflows for your reference.
+NOTE: Because of the minor version difference (e.g., PD v2.2.0.385 and PD v2.2.0.388), the workflows sometimes may fail to be used even using the same PD version. The MSFragger parameter files (for closed and open searches) are thus provided along with the workflows for your reference.
 
 ## Test Data
 We recommend the following publicly available HEK293 data set ([PXD001468](http://proteomecentral.proteomexchange.org/cgi/GetDataset?ID=PXD001468)) for testing, since this is what we typically use for testing as well.
