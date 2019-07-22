@@ -72,6 +72,7 @@ IMPORTANT: If you choose to use mzML format (instead of RAW), please **DO NOT** 
 
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig7.png" height="90%" width="90%">
 
+NOTE: Our MSFragger-PD node currently only supports running one processing workflow (allowing mutiple input files) at a time.
 
 ## Processing/Consensus Workflows
 We also provides three processing workflows and two consensus workflows for your reference, these can be found in the .rar files you downloaded [here](https://github.com/Nesvilab/PD-Nodes/releases).
