@@ -61,7 +61,7 @@ IMPORTANT: If you choose to use mzML format (instead of RAW), please **DO NOT** 
 
 **Step 1.** Select the binary files of MSFragger and Philosopher in their parameter window.
 
-**Step 2.** Import your protein fasta file via "Maintain FASTA Files" in PD. Specify the database in both MSFragger and (if used) PeptideProphet nodes.
+**Step 2.** Import your protein fasta file via "Maintain FASTA Files" in PD. Specify the database in MSFragger node.
 
 | MSFragger  | Philosopher |
 | ------------- | ------------- |
