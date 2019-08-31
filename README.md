@@ -71,7 +71,13 @@ IMPORTANT: If you choose to use mzML format (instead of RAW), please **DO NOT** 
 
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig7.png" height="90%" width="90%">
 
-NOTE: Our MSFragger-PD node currently only supports running one processing workflow (allowing mutiple input files) at a time.
+**Step 4.** To run multiple processing workflows in parallel (batch mode), please:
+(1) set up the value of “Max. Number of Processing Workflows in Parallel Execution” (at Adiministrator -> Configuration -> Parallel Job Execution) as 2 or above (as shown in the figure below).
+
+
+(2) manually set up the RAM (GB) of MSFragger node in each workflow (as shown in the figure below). A simple way to calculate the RAM is to take the average of available RAMs depending on the number of processing workflows being operated at a time. For example, if you want to run 4 processing workflows at the same time with 64G RAM available, please set up 8GB (=64/4) RAM in the MSFragger node of each workflow. It is recommended to run multiple processing workflows only for small data sets. If you have a large data set, please specify the value of “Max. Number of Processing Workflows in Parallel Execution” as 1, so the processing workflows will be run in a sequential order. 
+
+
 
 ## Processing/Consensus Workflows
 We also provides three processing workflows and two consensus workflows for your reference, these can be found in the .rar files you downloaded [here](https://github.com/Nesvilab/PD-Nodes/releases).
