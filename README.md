@@ -5,27 +5,27 @@ The following workflows have been tested and should be fully supported with our 
 - Conventional closed search, label-free or label-based (e.g. TMT)
 - Open search 
 
-Compared to SEQUEST-HT/Percolator (using a publicly available HEK293 data set PXD001468; conventional closed search), MSFragger/PeptideProphet(Philosopher) reduced the total processing speed by more than a factor of four. For open searches, improvement in processing speed was even greater. Using MSFragger instead of SEQUEST-HT (with PeptideProphet or Percolator) also resulted in a significant increase in the number of identified proteins/peptides/PSMs.
+Compared to SEQUEST-HT/Percolator (using a publicly available HEK293 data set PXD001468; conventional closed search), MSFragger/PeptideProphet(Philosopher) reduced the total processing speed by more than a factor of four. For open searches, the improvement in processing speed was even greater. Using MSFragger instead of SEQUEST-HT (with PeptideProphet or Percolator) also resulted in a significant increase in the number of identified proteins/peptides/PSMs.
 
 
 ### Installation of PD nodes
 
 The MSFragger node can be used with Thermo Scientific Proteome Discoverer versions 2.2 and 2.3 (not suitable for v2.1 or older versions).
 
-Please follow the steps below for the installation:
+Please follow the steps below to install:
 
-**Step 1.** Download the latest version of MSFragger-PDv22.rar or MSFragger-PDv23.rar (depending on your version of Proteome Discoverer) from our github [repository](https://github.com/nesvilab/PD-Nodes/releases/) and unzip/decompress the file. Make sure the MSFragger JAR (.jar extension) file is in the same directory as the ‘ext’ folder, which contains the libraries needed for reading .raw files.
+**Step 1.** Download the latest version of MSFragger-PDv22.rar or MSFragger-PDv23.rar (depending on your version of Proteome Discoverer) from our github [repository](https://github.com/nesvilab/PD-Nodes/releases/) and unzip/decompress the file.
 
-**Step 2.** Make sure that Proteome Discoverer is closed.
+**Step 2.** Make sure that the Proteome Discoverer application is closed.
 
 **Step 3.** Open the folder where Thermo Scientific Proteome Discoverer is installed.
-To find the folder location of Thermo Scientific Proteome Discoverer, right click on your Thermo Scientific Proteome Discoverer desktop icon and then click on "Properties". The folder path is shown in the field called Target (as shown below).
+To find this location, right click on your Thermo Scientific Proteome Discoverer desktop icon and then click on "Properties". The folder path is shown in the field called Target (as shown below).
 
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig1.png" height="40%" width="40%" title="Proteome Discoverer Properties">
 
-**Step 4.** Copy "MSFragger-PD.dll" from the unzipped file to that folder. Delete any old versions of MSFragger-PD.dll.
+**Step 4.** Delete any older versions of MSFragger-PD.dll and copy "MSFragger-PD.dll" from the unzipped file to that folder. 
 
-**Step 5.** Open Thermo Scientific Proteome Discoverer, select the licensing page and click on "Scan for Missing Features".
+**Step 5.** Open Thermo Scientific Proteome Discoverer, select the licensing page and click on "Scan for Missing Features". You should be prompted to close and restart the application.
 
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig2.png" height="90%" width="90%" title="Find license">
 
@@ -33,13 +33,13 @@ To find the folder location of Thermo Scientific Proteome Discoverer, right clic
 
 <img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig3.png" height="40%" width="40%" title="MSFragger and PeptideProphet">
 
-**Step 7.** Download the latest versions of MSFragger and Philosopher tools from the corresponding GitHub repositories. They are NOT included with the MSFragger-PD.dll wrapper program.
+**Step 7.** Download the latest versions of MSFragger and Philosopher tools from the corresponding GitHub repositories (they are NOT included with the MSFragger-PD.dll wrapper program). Make sure the MSFragger JAR (.jar extension) file is in the same directory as the ‘ext’ folder, which contains the libraries needed for reading .raw files (i.e., don't move the .jar file separately from the top MSFragger folder):
 
-> MSFragger: [https://github.com/Nesvilab/MSFragger](https://msfragger.nesvilab.org/)
-Please follow instructions for obtaining the JAR binary file of MSFragger. 
+<img src="https://raw.githubusercontent.com/Nesvilab/MSFragger/master/images/fragger_dir_setup.png" height="40%" width="40%" title="Proteome Discoverer Properties">
 
-> Philosopher: [https://github.com/Nesvilab/philosopher](https://philosopher.nesvilab.org/)
-You will most likely need the following file: philosopher_windows_amd64.exe
+> [MSFragger](https://msfragger.nesvilab.org/): Please follow instructions for obtaining the JAR binary file of MSFragger. 
+
+> [Philosopher](https://philosopher.nesvilab.org/): You should download the `philosopher_windows_amd64.exe` file.
 
 NOTE: the original license agreements for MSFragger and Philosopher also apply when used within the PD environment. 
 
@@ -111,5 +111,5 @@ Kong AT, Leprevost FV, Avtonomov DM, Mellacheruvu D, Nesvizhskii AI. MSFragger: 
 Leprevost F. et al., Philosopher: a complete toolkit for shotgun proteomics data analysis. Manuscript in preparation.
 
 
-For other tools developed by Nesvizhskii lab, go to our website [www.nesvilab.org](http://www.nesvilab.org)
+For other tools developed by Nesvizhskii lab, see our [website](http://www.nesvilab.org).
 
