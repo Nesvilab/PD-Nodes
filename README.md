@@ -10,11 +10,11 @@ Compared to SEQUEST-HT/Percolator (using a publicly available HEK293 data set PX
 
 ### Installation of PD nodes
 
-The MSFragger node can be used with Thermo Scientific Proteome Discoverer versions 2.2 and 2.3 (not suitable for v2.1 or older versions).
+The MSFragger node can be used with Thermo Scientific Proteome Discoverer versions above 2.2 (not suitable for v2.1 or older versions).
 
 Please follow the steps below to install:
 
-**Step 1.** Download the latest version of MSFragger-PDv22.rar or MSFragger-PDv23.rar (depending on your version of Proteome Discoverer) from our github [repository](https://github.com/nesvilab/PD-Nodes/releases/) and unzip/decompress the file.
+**Step 1.** Download the latest version of MSFragger-PDv22.zip (or MSFragger-PDv23.zip/MSFragger-PDv24.zip) (depending on your version of Proteome Discoverer) from our github [repository](https://github.com/nesvilab/PD-Nodes/releases/) and unzip/decompress the file.
 
 **Step 2.** Make sure that the Proteome Discoverer application is closed.
 
@@ -84,7 +84,7 @@ IMPORTANT: If you choose to use mzML format (instead of RAW), **DO NOT** use "zl
 
 
 ### Processing/Consensus Workflows
-We also provide three processing workflows and two consensus workflows for your reference, these can be found in the .rar files you downloaded [here](https://github.com/Nesvilab/PD-Nodes/releases).
+We also provide three processing workflows and two consensus workflows for your reference, these can be found in the .zip files you downloaded [here](https://github.com/Nesvilab/PD-Nodes/releases).
 - Processing_MSFragger_Percolator_ClosedSearch.pdProcessingWF: Use MSFragger and Percolator for conventional closed search.
 - Processing_MSFragger_PeptideProphet_ClosedSearch.pdProcessingWF: Use MSFragger and PeptideProphet for conventional closed search.
 - Processing_MSFragger_PeptideProphet_OpenSearch.pdProcessingWF: Use MSFragger and PeptideProphet for open search.
