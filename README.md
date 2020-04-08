@@ -100,7 +100,12 @@ We recommend the following publicly available HEK293 data set ([PXD001468](http:
 ### Documentation
 For documentation on MSFragger itself (hardware requirements, search parameters, etc.), see MSFragger [Documentation Wiki page](https://github.com/Nesvilab/MSFragger/wiki). For Philosopher(PeptideProphet).
 
-### Questions and Technical Support
+### Frequently Asked Questions (FAQ)
+*Q:* __Why can't I see the MSFragger PD node after installation?__
+
+*A:* Please check that (1) you have [.Net 4.7 or above](https://dotnet.microsoft.com/download/dotnet-framework) installed in your computer, (2) the "MSFraggerPDv2x.dll" file is not blocked by your operating system. To unblock it, right click on the file and select 'Properties'. In the 'Attributes' section, select 'Advanced' and then click 'Unblock'.
+
+### Additional Help and Technical Support
 Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [Philsopher page](https://github.com/Nesvilab/philosopher).
 
 ### How to Cite
