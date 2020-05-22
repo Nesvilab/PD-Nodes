@@ -105,6 +105,10 @@ For documentation on MSFragger itself (hardware requirements, search parameters,
 
 *A:* Please check that (1) you have [.Net 4.7 or above](https://dotnet.microsoft.com/download/dotnet-framework) installed in your computer, (2) the "MSFraggerPDv2x.dll" file is not blocked by your operating system. To unblock it, right click on the file and select 'Properties'. In the 'Attributes' section, select 'Advanced' and then click 'Unblock'.
 
+*Q:* __Why I have this error message: Could not create the Java Virtual Machine?__
+
+*A:* Please check if you have the correct version of Java Runtime Environment (JRE) (e.g., 64 and 32 bit) installed in your computer.
+
 ### Additional Help and Technical Support
 Please post all questions/bug reports regarding MSFragger itself on the [MSFragger GitHub page](https://github.com/Nesvilab/MSFragger), or if more appropriate on [Philsopher page](https://github.com/Nesvilab/philosopher).
 
