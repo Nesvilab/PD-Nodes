@@ -7,6 +7,15 @@ The following workflows have been tested and should be fully supported with our 
 
 Compared to SEQUEST-HT/Percolator (using a publicly available HEK293 data set PXD001468; conventional closed search), MSFragger/PeptideProphet(Philosopher) reduced the total processing speed by more than a factor of four. For open searches, the improvement in processing speed was even greater. Using MSFragger instead of SEQUEST-HT (with PeptideProphet or Percolator) also resulted in a significant increase in the number of identified proteins/peptides/PSMs.
 
+#### Page Contents
+* [Installation](https://www.nesvilab.org/PD-Nodes/#installation-of-pd-nodes)
+* [Requirements](https://www.nesvilab.org/PD-Nodes/#requirements)
+* [How to Use](https://www.nesvilab.org/PD-Nodes/#how-to-use)
+* [Processing/Consensus Workflows](https://www.nesvilab.org/PD-Nodes/#processingconsensus-workflows)
+* [Documentation](https://www.nesvilab.org/PD-Nodes/#documentation)
+* [FAQ](https://www.nesvilab.org/PD-Nodes/#frequently-asked-questions-faq)
+* [Help/How to Cite](https://www.nesvilab.org/PD-Nodes/#additional-help-and-technical-support)
+<br>
 
 ### Installation of PD nodes
 
@@ -103,7 +112,7 @@ For documentation on MSFragger itself (hardware requirements, search parameters,
 ### Frequently Asked Questions (FAQ)
 *Q:* __Why can't I see the MSFragger PD node after installation?__
 
-*A:* Please check that (1) you have [.Net 4.7 or above](https://dotnet.microsoft.com/download/dotnet-framework) installed in your computer, (2) the "MSFraggerPDv2x.dll" file is not blocked by your operating system. To unblock it, right click on the file and select 'Properties'. In the 'Attributes' section, select 'Advanced' and then click 'Unblock'.
+*A:* Please check that (1) you have .Net 4.7 or above installed in your computer, (2) the “MSFraggerPDv2x.dll” file is not blocked by your operating system. To unblock it, right click on the file and select ‘Properties’, then in the ‘Attributes’ section, select ‘Advanced’ and then click ‘Unblock’. Alternatively, you can run `unblock-file -path "C:\Program Files\Thermo\Proteome Discoverer 2.x\System\Release\MSFraggerPDv2x.dll"` (make sure this path is correct) from Windows PowerShell as administrator.
 
 *Q:* __Why I have this error message: Could not create the Java Virtual Machine?__
 
