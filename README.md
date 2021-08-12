@@ -44,7 +44,7 @@ To find this location, right click on your Thermo Scientific Proteome Discoverer
 
 **Step 7.** Download the latest versions of MSFragger and Philosopher tools from the corresponding GitHub repositories (they are NOT included with the MSFragger-PD.dll wrapper program). Make sure the MSFragger JAR (.jar extension) file is in the same directory as the ‘ext’ folder, which contains the libraries needed for reading .raw files (i.e., don't move the .jar file separately from the top MSFragger folder):
 
-<img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig5.png" height="40%" width="40%" title="Proteome Discoverer Properties">
+<img src="https://raw.githubusercontent.com/Nesvilab/PD-Nodes/master/fig10.png" height="40%" width="40%" title="Proteome Discoverer Properties">
 
 > [MSFragger](https://msfragger.nesvilab.org/): Please follow instructions for obtaining the JAR binary file of MSFragger. 
 
