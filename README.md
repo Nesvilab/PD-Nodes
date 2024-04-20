@@ -1,3 +1,5 @@
+![Release](https://img.shields.io/github/release/Nesvilab/PD-Nodes.svg) ![Downloads](https://img.shields.io/github/downloads/Nesvilab/PD-Nodes/total.svg) ![Downloads](https://img.shields.io/github/downloads/Nesvilab/PD-Nodes/latest/total.svg)
+
 ## Introduction
 [MSFragger](http://msfragger.nesvilab.org/) is an ultrafast database search tool for peptide identification in mass spectrometry-based proteomics. While we provide a stand-alone Graphical User interface [FragPipe](https://fragpipe.nesvilab.org) for running MSFragger, here we describe the implementation of MSFragger as a processing node in the Thermo Scientific Proteome Discoverer (PD) environment. We also provide PeptideProphet (via [Philosopher](https://nesvilab.github.io/philosopher/)) as part of the PD processing node, enabling downstream processing of MSFragger search results in PD using either Percolator or PeptideProphet. 
 
